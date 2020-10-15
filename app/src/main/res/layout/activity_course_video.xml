@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseVideoActivity">
+
+
+    <com.potyvideo.library.AndExoPlayerView
+        android:id="@+id/andExoPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:andexo_aspect_ratio="aspect_16_9"
+        app:andexo_full_screen="true"
+        app:andexo_play_when_ready="true"
+        app:andexo_show_controller="true"
+        app:andexo_resize_mode="Fit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:fontFamily="sans-serif-condensed-medium"
+        android:id="@+id/courseTitle"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="30 days of Java | Unlock your\nJava Potential"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/andExoPlayerView" />
+
+
+      <TextView
+        android:id="@+id/lecturerName"
+          android:layout_marginLeft="15sp"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Justin Mitchel"
+          android:fontFamily="sans-serif-condensed-light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/courseTitle" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/recylerViewCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lecturerName"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Days 1: Basics"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/basicCourseRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
